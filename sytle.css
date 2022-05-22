@@ -14,3 +14,94 @@ body{
 section{
     padding-top: 5rem;
 }
+
+/* Tools Section */
+.tools-box{
+    position: relative;
+    background-color: #0c6efd ;
+    border-radius: 10px;
+    height: 500px;
+    transform-style: preserve-3d;
+}
+
+.tools-box::before{
+    content: 'MY';
+    position: absolute;
+    color: #ffffff;
+    font-size: 6em;
+    font-weight: bold;
+    font-style: italic;
+    top: 30px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.tools-box:hover::before{
+    opacity: 0.2;
+}
+
+
+.tools-box::after{
+    content: 'Tools';
+    position: absolute;
+    color: #ffffff;
+    font-size: 4.3em;
+    font-weight: bold;
+    font-style: italic;
+    top: 350px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.tools-box:hover::after{
+    opacity: 0.2;
+}
+
+.tools-name{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    color: #ffffff;
+    text-align: center;
+    font-size: 2em;
+    opacity: 0;
+    transform: translate3d(0, 0, 50px);
+    transition: 0.5s;
+}
+
+.tools-box:hover .tools-name{
+    top: 30px;
+    opacity: 1;
+}
+
+.tools-detail-button{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate3d(-50%, 0, 100px);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.tools-box:hover .tools-detail-button {
+    opacity: 1;
+    bottom: 20px;
+}
+
+.tools-img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -52%, 100px);
+    max-width: 200px;
+    transition: 0.5s;
+    z-index: 10;
+}
+
+.tools-box:hover .tools-img{
+    transform: translate3d(-50%, -52%, 100px) rotate(5deg) scale(1.2);
+}
